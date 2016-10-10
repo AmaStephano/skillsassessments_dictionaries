@@ -89,7 +89,7 @@ def word_length_sorted(words):
     """
 
     word_lengths = {}
-    # print words
+  
     for word in words:
         length = len(word)
         if length not in word_lengths:
@@ -230,8 +230,8 @@ def kids_game(names):
     del names[0]
     length -= 1
 
-    flag = True
-    while (current_letter in names_and_first_letter and length > 0 and flag == True): 
+    in_list = True
+    while (current_letter in names_and_first_letter and length > 0 and in_list == True): 
         for n in range(0, length):
             if names[n][0] == current_letter:
                 output.append(names[n])
@@ -240,7 +240,7 @@ def kids_game(names):
                 length -= 1
                 break
         else:
-            flag = False
+            in_list = False
 
     return output
 
